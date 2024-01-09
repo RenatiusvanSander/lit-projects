@@ -4,3 +4,5 @@ class MyCard extends HTMLElement {
         this.innerHTML = 'Hello World';
     }
 }
+
+window.customElements.define('my-card', MyCard);

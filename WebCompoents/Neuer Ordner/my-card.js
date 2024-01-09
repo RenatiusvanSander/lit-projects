@@ -1,6 +1,6 @@
 class MyCard extends HTMLElement {
 
-    connectedCallBack() {
+    connectedCallback() {
         this.innerHTML = 'Hello World';
     }
 }

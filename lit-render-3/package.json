@@ -1,0 +1,17 @@
+{
+  "name": "lit-render-3",
+  "version": "1.0.0",
+  "description": "render several custom elements",
+  "main": "src/lit-render-3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Remy Meier",
+  "license": "ISC",
+  "devDependencies": {
+    "lit": "^3.1.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@types/node": "^20.10.8"
+}

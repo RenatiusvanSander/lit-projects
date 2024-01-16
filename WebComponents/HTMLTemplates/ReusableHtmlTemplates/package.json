@@ -1,8 +1,8 @@
 {
-  "name": "lit-reactive-proeprties-01",
+  "name": "reusablehtmltemplates",
   "version": "1.0.0",
-  "description": "lit reactive proeprties first try",
-  "main": "src/name-tag.js",
+  "description": "",
+  "main": "src/reusable-html-templates.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

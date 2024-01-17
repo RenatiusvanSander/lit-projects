@@ -1,0 +1,21 @@
+{
+  "name": "lit-reactive-properties-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/lit-reactive-properties-02.js",
+  "module": "src/lit-reactive-properties-02.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Remy Meier",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@lit/reactive-element": "^2.0.0",
+    "lit": "^3.0.0",
+    "lit-element": "^4.0.0",
+    "lit-html": "^3.0.0"
+  }
+}

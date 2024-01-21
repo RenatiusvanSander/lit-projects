@@ -1,0 +1,29 @@
+{
+  "name": "typescript-rollup",
+  "version": "1.0.0",
+  "description": "A basic TypeScript project built using Rollup.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && tsc && rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luixaviles/typescript-rollup.git"
+  },
+  "keywords": [],
+  "author": "Luis Aviles <@luixaviles>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luixaviles/typescript-rollup/issues"
+  },
+  "homepage": "https://github.com/luixaviles/typescript-rollup#readme",
+  "devDependencies": {
+    "@open-wc/building-rollup": "^3.0.2",
+    "deepmerge": "^4.3.1",
+    "rimraf": "^5.0.5",
+    "rollup": "^3.21.0",
+    "typescript": "^5.3.3"
+  }
+}

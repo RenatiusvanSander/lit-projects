@@ -1,0 +1,22 @@
+{
+  "name": "reusablehtmltemplates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/reusable-html-templates.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Remy Meier",
+  "license": "ISC",
+  "devDependencies": {
+    "lit": "^3.1.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "lit": "^3.0.0",
+    "@lit/reactive-element": "^2.0.0",
+    "lit-element": "^4.0.0",
+    "lit-html": "^3.0.0",
+    "@types/node": "^20.10.8"
+  }
+}

@@ -2,11 +2,12 @@
   "name": "lit-reactive-proeprties-01",
   "version": "1.0.0",
   "description": "lit reactive proeprties first try",
-  "main": "src/name-tag.js",
-  "type": "module",
+  "main": "name-tag.js",
+  "module": "name-tag.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "build": "tsc",
+    "build:watch": "tsc --watch"
   },
   "author": "Remy Meier",
   "license": "ISC",

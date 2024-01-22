@@ -6,7 +6,7 @@ class NameTag extends LitElement {
   @property()
   name?: string;
 
-  render() {
+  override render() {
     return html`Hello I'm ${this.name}.`;
   }
 }

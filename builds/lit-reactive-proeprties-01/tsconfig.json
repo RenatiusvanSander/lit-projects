@@ -2,13 +2,13 @@
   /* sourc: https://raw.githubusercontent.com/lit/lit/main/packages/lit-starter-ts/tsconfig.json */
   "compilerOptions": {
     "target": "es2021",
-    "module": "es2020",
+    "module": "ES2020",
     "lib": ["es2021", "DOM", "DOM.Iterable"],
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
     "inlineSources": true,
-    "outDir": "./",
+    "outDir": "./build",
     "rootDir": "./src",
     "strict": true,
     "noUnusedLocals": true,

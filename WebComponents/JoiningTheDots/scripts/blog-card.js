@@ -47,6 +47,12 @@ class BlogCard extends HTMLElement {
             shadowRoot.innerHTML = '<p>ShadowRoot failed. Pleae try again later.</p>';
         }
     }
+
+    disconnectedCallback() {
+        console.log('Disconnected from the DOM!');
+    }
 }
 
 customElements.define('blog-card', BlogCard);
+
+document.querySelector('blog-card').remove();

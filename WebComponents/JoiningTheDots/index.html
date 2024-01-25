@@ -35,8 +35,28 @@
             </div>
         </div>
     </template>
+    <!-- blog modal template -->
+    <template id="modal-template">
+        <style>
+            .modal {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                border: 1px solid #ddd;
+                background-color: #fff;
+                padding: 10px;
+                box-sizing: border-box; 
+            }
+        </style>
+        <div class="modal">
+            <div class="title"></div>
+            <div class="content"></div>
+        </div>
+    </template>
 
     <blog-card></blog-card>
+    <blog-modal title="Blog Post #1" content="This is the blog post number 1. This is the content of the text."></blog-modal>
     <script src="./scripts/blog-card.js"></script>
+    <script src="./scripts/blog-modal.js"></script>
 </body>
 </html>

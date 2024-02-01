@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sherlock Holmes</title>
+    <title>Sherlock Holmes - The Blog</title>
+    <link rel='stylesheet' href='./styles/index.css' />
 </head>
 <body>
     <template id="card-template">
@@ -53,13 +54,19 @@
         </div>
     </template>
 
-    <!-- <blog-card></blog-card> -->
-    <!-- <blog-modal title="Blog Post #1" content="This is the blog post number 1. This is the content of the text."></blog-modal>-->
-    <div id="blog-cards-container"></div>
-    <header class="navbar">Someones Blog</header>
-    <script src="./scripts/blog-card.js"></script>
-    <script src="./scripts/blog-modal.js"></script>
+    <!-- <blog-modal title='Title' content='Lorem Ipsum'></blog-modal> -->
+    <!-- <div>
+        <blog-card></blog-card>
+    </div> -->
+    <header class='navbar'>Sherlock Holmes - The Blog</header>
+    <div id='blog-cards-container'></div>
+    <script src='./scripts/blog-card.js'></script>
+    <script src='./scripts/blog-modal.js'></script>
     <script>
+        // setTimeout(function() {
+        //     document.getElementsByTagName('blog-modal')[0].setAttribute["title", 'Endapa'];
+        //     console.log('Here');
+        // }, 2000)
         const titles = [
             {title: 'The Five Orange Pips', subtitle: 'A delivery of innocous letter followed by death.', cover: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Sherlock_Holmes_in_The_Five_Orange_Pips.jpg'},
             {title: 'A Study in Scarlet', subtitle: 'Dr. John Watson meets Mr. Sherlock Holmes.', cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/A_study_in_scarlet%2C_Plate_1.png/640px-A_study_in_scarlet%2C_Plate_1.png'},
@@ -67,13 +74,14 @@
         ]
 
         titles.forEach(title => {
-            let node = document.createElement('blog-card');
+            console.log(title);
+            let node = document.createElement('blog-card')
             node.setAttribute('title', title.title);
-            node.setAttribute('subtitle', title.subtitle);
+            node.setAttribute('subtitle', title.subtitle)
             node.setAttribute('cover', title.cover);
-
+            // document.getElementById('blog-cards-container').appendChild(`<blog-card title="${title.title}" subtitle="${title.subtitle}" cover="${title.cover}"></blog-card>`)
             document.getElementById('blog-cards-container').appendChild(node);
-        });
+        })
     </script>
 </body>
 </html>

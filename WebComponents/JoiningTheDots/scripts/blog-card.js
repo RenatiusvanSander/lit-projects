@@ -7,7 +7,7 @@
 class BlogCard extends HTMLElement {
 
     static get observedAttributes() {
-        return ['title','content','cover'];
+        return ['title','subtitle','cover'];
     }
 
     constructor() {
@@ -18,34 +18,32 @@ class BlogCard extends HTMLElement {
        this.attachShadow({mode: 'open'});
     }
 
-    attributeChangedCallback(attrname, oldValue, newValue) {
+    attributeChangedCallback(attrName, oldValue, newValue) {
+        console.log(oldValue, newValue);
         if(oldValue !== newValue && newValue !== null) {
-            this.[attrName] = newValue;
+            this[attrName] = newValue;
         }
+        // this.render();
     }
 
-    connectedCallback() {
-        const template = document.getElementById('card-template');
-
-        titles.forEach(title => {
-            const instance = document.importNode(template.contentEditable, true);
-
-            instance.querySelector('.title').innerHtml = title.title;
-            instance.querySelector('.subtitle').innerHtml = title.subtitle;
-
-            this.appendChild(instance);
-        });
-
+    connectedCallback() { 
+        console.log('Here');
         this.render();
+    }
+
+    disconnectedCallback() {
+        console.log('Disconnected from the DOM!');
     }
 
     render() {
         const {shadowRoot} = this;
         const templateNode = document.getElementById('card-template');
 
+        console.log(templateNode);
+
         shadowRoot.innerHTML = '';
         if(templateNode) {
-            const instance = document.importNode(templateNode.contentEditable, true);
+            const instance = document.importNode(templateNode.content, true);
             instance.querySelector('.title').innerHTML = this['title'];
             instance.querySelector('.subtitle').innerHTML = this['subtitle'];
             instance.querySelector('.cover').src = this['cover'];
@@ -54,10 +52,6 @@ class BlogCard extends HTMLElement {
         } else {
             shadowRoot.innerHTML = '<p>ShadowRoot failed. Pleae try again later.</p>';
         }
-    }
-
-    disconnectedCallback() {
-        console.log('Disconnected from the DOM!');
     }
 }
 

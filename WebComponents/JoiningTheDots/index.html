@@ -11,18 +11,46 @@
     <template id="card-template">
         <style>
             .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 border: 1px solid #ddd;
-                width: 200px;
-                padding: 10px;
+                width: 80%;
+                /* padding: 10px; */
+                height: 400px;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                background-color: #fff;
+                justify-content: space-evenly;
+                border-radius: 10px;
             }
 
             .header {
-                padding: 10px;
+                height: 300px;
+                width: 100%;
                 border-bottom: 1px solid #ddd;
             }
 
             .content {
-                margin-top: 10px;
+                box-sizing: border-box;
+                width: 100%;
+                margin: 0;
+                padding: 0 10px;
+            }
+
+            .cover {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .title {
+                margin: 0;
+                font-size: 20px;
+            }
+
+            .subtitle {
+                color: #666;
+                font-size: 20px;
             }
         </style>
         <div class="card">

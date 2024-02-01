@@ -21,12 +21,11 @@ class BlogModal extends HTMLElement {
         this.render();
     }
 
-    // 5:15
     get title() {
         return this.getAttribute('title');
     }
 
-    get conntent() {
+    get content() {
         return this.getAttribute('content');
     }
 
@@ -38,7 +37,7 @@ class BlogModal extends HTMLElement {
         }
     }
 
-    set conntent(value) {
+    set content(value) {
         if(value) {
             this.setAttribute('content', value);
         } else {

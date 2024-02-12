@@ -1,0 +1,56 @@
+{
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "airbnb-base"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "globalThis": "readonly",
+      "ICON_PATH": "readonly",
+      "ICON_PATH_COMINVEST": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "class-methods-use-this": "off",
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "import/extensions": "off",
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "src/**/stories.ts",
+            "webpack.config.js"
+          ]
+        }
+      ],
+      "indent": "warn",
+      "max-classes-per-file": "off",
+      "max-len": ["error", { "code": 120 }],
+      "no-restricted-syntax": "off",
+      "no-unused-vars": "off",
+      "linebreak-style": "off"
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".ts"
+          ]
+        }
+      }
+    }
+  }

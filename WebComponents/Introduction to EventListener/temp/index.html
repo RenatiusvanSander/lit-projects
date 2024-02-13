@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+    <my-card></my-card>
+    <div id="content"></div>
+    <my-card></my-card>
+    <my-card></my-card>
+    <h1 id="header">This will not have a red background!</h1>
+  <script src="./my-card.js"></script>
+  <script>const shadowRoot= document.getElementById('content').attachShadow({mode: 'open'})
+  shadowRoot.innerHTML = `
+    <style>
+        h1 {
+            background: red;
+            color: #fff;
+        }
+
+    </style>
+    <h1 id='header'>This will have red background.</h1>
+    `;
+  </script>
+</body>
+</html>

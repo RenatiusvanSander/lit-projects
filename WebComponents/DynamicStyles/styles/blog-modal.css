@@ -1,0 +1,22 @@
+.wrapper {
+    opacity: 0;
+    transition: visibility 0s, opacity 0.25 ease in;
+}
+
+.wrapper:not(.open) {
+    visibility: hidden;
+}
+
+.modal {
+    position: fixed;
+    width: 70%;
+    z-index: 500;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    left: 15%;
+    top: 30%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+}

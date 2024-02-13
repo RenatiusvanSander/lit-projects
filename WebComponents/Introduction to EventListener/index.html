@@ -39,23 +39,28 @@
         </div>
     </template>
     <template id="modal-template">
-        <link rel="stylesheet" href="./styles/blog-modal.css" />
-        <div class="wrapper">
-            <div class="overlay">
-                <div class="modal">
-                    <div class="title"></div>
-                    <div class="content"></div>
-                </div>
-           </div>
+        <style>
+            .modal {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                border: 1px solid #ddd;
+                background-color: #fff;
+                padding: 10px;
+                box-sizing: border-box; 
+            }
+        </style>
+        <div class="modal">
+            <div class="title"></div>
+            <div class="content"></div>
         </div>
     </template>
 
-    <blog-modal title='Title' content='Lorem Ipsum'></blog-modal>
+    <!-- <blog-modal title='Title' content='Lorem Ipsum'></blog-modal> -->
     <!-- <div>
         <blog-card></blog-card>
     </div> -->
     <header class='navbar'>Sherlock Holmes - The Blog</header>
-    <div class='card'></div>
     <div id='blog-cards-container'></div>
     <script src='./scripts/blog-card.js'></script>
     <script src='./scripts/blog-modal.js'></script>
@@ -78,15 +83,6 @@
             node.setAttribute('cover', title.cover);
             // document.getElementById('blog-cards-container').appendChild(`<blog-card title="${title.title}" subtitle="${title.subtitle}" cover="${title.cover}"></blog-card>`)
             document.getElementById('blog-cards-container').appendChild(node);
-        })
-
-        let cards = document.getElementsByTagName('blog-card');
-        console.log(cards);
-        [...cards].forEach(card => {
-            card.addEventListener('click', () => {
-                console.log('Hello');
-                // document.querySelector('blog-modal').open = true;
-            })
         })
     </script>
 </body>

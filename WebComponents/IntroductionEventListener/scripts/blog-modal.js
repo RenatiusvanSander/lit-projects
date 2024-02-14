@@ -1,5 +1,4 @@
 class BlogModal extends HTMLElement {
-
     static get observedAttributes() {
         return ['title', 'content'];
     }
@@ -8,7 +7,7 @@ class BlogModal extends HTMLElement {
         super();
         this.attachShadow({mode: 'open'});
     }
-
+    
     connectedCallback() {
         this.render();
     }
@@ -29,21 +28,23 @@ class BlogModal extends HTMLElement {
         return this.getAttribute('content');
     }
 
-    set title(value) {
-        if(value) {
-            this.setAttribute('title', value);
+    set title(title_attr) {
+        if(title_attr) {
+            this.setAttribute('title', title_attr)
         } else {
             this.removeAttribute('title');
         }
     }
 
-    set content(value) {
-        if(value) {
-            this.setAttribute('content', value);
+    set content(content_attr) {
+        if(content_attr) {
+            this.setAttribute('content', content_attr)
         } else {
             this.removeAttribute('content');
         }
     }
+
+
 
     render() {
         const { shadowRoot } = this;
@@ -51,12 +52,10 @@ class BlogModal extends HTMLElement {
 
         shadowRoot.innerHTML = '';
         if(templateNode) {
-            const instance = document.importNode(templateNode.contentEditable, true);
-            instance.querySelector('.title').innerHTML = this.['title'];
-            instance.querySelector('.content').innerHTML = this.['content'];
+            const instance = document.importNode(templateNode.content, true);
+            instance.querySelector('.title').innerHTML = this['title'];
+            instance.querySelector('.content').innerHTML = this['content'];
             shadowRoot.appendChild(instance);
-        } else {
-            shadowRoot.innerHTML = '<p>Shadow Root failed. Please try again later.<p>';
         }
     }
 }

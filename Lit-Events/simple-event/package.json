@@ -1,0 +1,32 @@
+{
+  "name": "simple-event",
+  "version": "1.0.0",
+  "description": "",
+  "main": "my-element.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:tsc": "tsc",
+    "build": "rollup -c"
+  },
+  "author": "Remy Meier",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@web/rollup-plugin-copy": "^0.5.1",
+    "@web/rollup-plugin-html": "^2.1.2",
+    "lit": "^3.1.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-minify-html-literals": "^1.2.6",
+    "rollup-plugin-summary": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@lit/reactive-element": "^2.0.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.10.8",
+    "lit": "^3.0.0",
+    "lit-element": "^4.0.0",
+    "lit-html": "^3.0.0"
+  }
+}

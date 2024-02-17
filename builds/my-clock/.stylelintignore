@@ -1,0 +1,9 @@
+*.jpg
+*.json
+*.png
+*.svg
+*.woff
+*.woff2
+*.md
+dist
+node_modules

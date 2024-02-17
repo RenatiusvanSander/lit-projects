@@ -1,0 +1,1 @@
+{"version":3,"file":"my-clock-new.d.ts","sourceRoot":"","sources":["../src/my-clock-new.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,UAAU,EAAO,MAAM,KAAK,CAAC;AAGrC,qBACa,UAAW,SAAQ,UAAU;IAEd,WAAW,CAAC,EAAE,MAAM,CAAC;IAE/C,OAAO,CAAC,cAAc,CAAQ;IAC9B,OAAO,CAAC,cAAc,CAAqB;;IASlC,iBAAiB;IAK1B,OAAO,CAAC,iBAAiB;IAOhB,oBAAoB;cAKV,MAAM;CAM1B"}
